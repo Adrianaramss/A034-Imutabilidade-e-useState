@@ -50,18 +50,19 @@ function App() {
     }
 
     const [pokemon2, setPokemon2] = useState({
-      ...pokemon,
       name: "Togepi",
       type: " Fairy",
+      evolved: false,
       weight: 1.5,
       color: 'red',
-      image: 'https://archives.bulbagarden.net/media/upload/thumb/6/6b/175Togepi.png/250px-175Togepi.png'
+      image: 'https://archives.bulbagarden.net/media/upload/thumb/6/6b/175Togepi.png/250px-175Togepi.png',
+      id: 0
      
     })
 
     function evoluirPokemon2() {
       const togepi = {
-        ... pokemon,
+        ... pokemon2,
         name: "Togetic",
         weight: 3.2,
         color: 'red',
@@ -74,11 +75,11 @@ function App() {
 
       function voltarPokemon2() {
         const togepi = {
-          ... pokemon,
-          name: "Togetic",
+          ... pokemon2,
+          name: "Togepi",
           weight: 3.2,
           color: 'red',
-          image: 'https://archives.bulbagarden.net/media/upload/thumb/1/11/176Togetic.png/250px-176Togetic.png'
+          image: 'https://archives.bulbagarden.net/media/upload/thumb/6/6b/175Togepi.png/250px-175Togepi.png'
       
         }
         setPokemon2(togepi)
@@ -98,7 +99,7 @@ function App() {
      
      evoluir={evoluirPokemon2} color={pokemon2.color} name={pokemon2.name} weight={pokemon2.weight}
           image={pokemon2.image} type={pokemon2.type}
-          voltarPokemon={voltarPokemon2}/>
+          voltar={voltarPokemon2}/>
      
      
     
